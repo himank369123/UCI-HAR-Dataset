@@ -87,7 +87,7 @@ names(subset_data) <- temp_name
 head(subset_data)
 
 #5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-dim(subset_data)
+
 #applying mean to every variable for activity and subject using aggregate and storing in tidy data.
 tidydata <- aggregate(subset_data[,3:81], by = list(activity = subset_data$activity, subject = subset_data$subject),FUN = mean)
 head(tidydata)
